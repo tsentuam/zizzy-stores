@@ -210,6 +210,34 @@
   }
 }
 
+@media (max-width: 900px) {
+  .atelier-header {
+    padding: 0 24px;
+    height: 70px;
+  }
+
+  .atelier-main {
+    padding: 24px 20px 60px 20px;
+  }
+
+  .atelier-cart-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .atelier-footer {
+    padding: 28px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .atelier-footer-nav {
+    gap: 16px;
+  }
+}
+
 @media (max-width: 480px) {
   .metrics-grid {
     grid-template-columns: 1fr;
@@ -223,5 +251,33 @@
 
   .header-actions .btn-secondary {
     display: none;
+  }
+
+  .atelier-heading {
+    font-size: 1.75rem;
+  }
+
+  .atelier-header {
+    padding: 0 16px;
+  }
+
+  .atelier-main {
+    padding: 20px 16px 60px 16px;
+  }
+
+  .empty-cart-card {
+    padding: 36px 16px;
+    min-height: 300px;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .atelier-footer-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 }

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Selection — Digital Atelier</title>
+  <meta name="description" content="Review your atelier items before finalizing your acquisition on Digital Atelier.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="atelier-page">
+
+  <!-- ====================================================================
+       ATELIER HEADER
+       ==================================================================== -->
+  <header class="atelier-header" aria-label="Digital Atelier Navigation">
+    <a href="index.html" class="atelier-brand-link" title="Return to Storefront">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>DIGITAL ATELIER</span>
+    </a>
+
+    <a href="your selection.html" class="atelier-cart-trigger" title="Cart Selection" aria-label="Shopping Cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span class="atelier-cart-badge" aria-label="0 items in cart">0</span>
+    </a>
+  </header>
+
+  <!-- ====================================================================
+       MAIN CONTENT CONTAINER
+       ==================================================================== -->
+  <main class="atelier-main">
+    
+    <!-- Title & Introduction Section -->
+    <div class="atelier-heading-group">
+      <h1 class="atelier-heading">Your Selection</h1>
+      <p class="atelier-subtitle">A curated collection of pieces refined for your digital lifestyle.</p>
+      <p class="atelier-subtitle">Review your atelier items before finalizing your acquisition.</p>
+    </div>
+
+    <!-- Two-Column Selection Area -->
+    <div class="atelier-cart-grid">
+      
+      <!-- LEFT COLUMN: Large Empty Cart Card -->
+      <section class="empty-cart-card" aria-label="Current Cart Items">
+        <svg class="empty-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <h2 class="empty-cart-title">Your Cart is Empty</h2>
+        <p class="empty-cart-desc">Discover unique items to add to your collection.</p>
+        <a href="index.html#tab-products" class="btn-explore-collection">
+          EXPLORE COLLECTION
+        </a>
+      </section>
+
+      <!-- RIGHT COLUMN: Order Summary Card & Feature Cards -->
+      <aside class="order-summary-column" aria-label="Order Summary and Guarantees">
+        
+        <!-- Order Summary Card -->
+        <div class="order-summary-box">
+          <h2 class="order-summary-title">Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span class="summary-row-val"><span class="currency-symbol">₦</span>0</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Delivery Info</span>
+            <span class="summary-row-muted">Free delivery nationwide</span>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-total-row">
+            <span>Estimated Total</span>
+            <span class="summary-total-val"><span class="currency-symbol">₦</span>0</span>
+          </div>
+
+          <a href="#modal-empty-checkout" class="btn-checkout-securely" title="Proceed to Checkout">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>CHECKOUT SECURELY</span>
+          </a>
+
+          <a href="index.html#tab-products" class="btn-continue-shopping">
+            ← CONTINUE SHOPPING
+          </a>
+        </div>
+
+        <!-- 3 Small Feature Cards -->
+        <div class="feature-cards-grid">
+          <div class="feature-card-item">
+            <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span class="feature-card-text">SECURE PAYMENT</span>
+          </div>
+
+          <div class="feature-card-item">
+            <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+            <span class="feature-card-text">FAST DELIVERY</span>
+          </div>
+
+          <div class="feature-card-item">
+            <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+            <span class="feature-card-text">MULTIPLE OPTIONS</span>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- Recommendation Section -->
+    <section class="recommendation-section" aria-label="Product Recommendations">
+      <h2 class="recommendation-title">You may also desire</h2>
+      <p class="recommendation-empty">No other assets available.</p>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="atelier-footer" aria-label="Footer Information">
+    <div>
+      <p class="atelier-footer-brand">Digital Atelier</p>
+      <p>© 2026 Digital Atelier. All rights reserved.</p>
+    </div>
+
+    <nav class="atelier-footer-nav" aria-label="Legal & Policy Links">
+      <a href="#modal-legal" class="atelier-footer-link">PRIVACY POLICY</a>
+      <a href="#modal-legal" class="atelier-footer-link">TERMS OF SERVICE</a>
+      <a href="#modal-legal" class="atelier-footer-link">SHIPPING &amp; RETURNS</a>
+      <a href="#modal-legal" class="atelier-footer-link">SUSTAINABILITY</a>
+    </nav>
+
+    <div class="atelier-footer-controls" aria-label="Preferences">
+      <span title="Region: Nigeria / English" style="cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+      </span>
+      <span title="Toggle Color Theme" style="cursor: pointer; display: inline-flex; align-items: center;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"></path>
+        </svg>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Floating Customer Support Widget -->
+  <a href="#modal-support" class="atelier-chat-pill" aria-label="Customer Concierge &amp; Support">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </a>
+
+  <!-- ====================================================================
+       PURE CSS MODALS (Using :target pseudo-class)
+       ==================================================================== -->
+
+  <!-- Modal: Empty Cart Notice on Checkout -->
+  <div id="modal-empty-checkout" class="modal-overlay" role="dialog" aria-labelledby="modal-empty-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-empty-title">Cart is Empty</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 24px;">
+        <svg style="width: 48px; height: 48px; margin: 0 auto 16px auto; color: #8C7D73;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <h4 style="font-size: 1.0625rem; font-weight: 700; color: #1C1917; margin-bottom: 6px;">Your selection contains no items</h4>
+        <p style="font-size: 0.84375rem; color: #78716C;">Please add items from the digital catalog before proceeding to secure checkout.</p>
+      </div>
+      <div class="modal-footer" style="justify-content: center;">
+        <a href="index.html#tab-products" class="btn btn-primary">Browse Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Legal & Policies -->
+  <div id="modal-legal" class="modal-overlay" role="dialog" aria-labelledby="modal-legal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-legal-title">Digital Atelier Policies</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <h4 style="margin-bottom: 6px;">Authenticity &amp; Quality</h4>
+        <p style="font-size: 0.8125rem; margin-bottom: 14px;">All pieces curated on Digital Atelier are verified for craftsmanship, luxury materials, and authentic provenance.</p>
+        <h4 style="margin-bottom: 6px;">Nationwide Delivery &amp; Returns</h4>
+        <p style="font-size: 0.8125rem;">Complimentary standard shipping nationwide across Nigeria. 7-day hassle-free return policy on unwashed, tagged garments.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-secondary">Close</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Customer Concierge -->
+  <div id="modal-support" class="modal-overlay" role="dialog" aria-labelledby="modal-support-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-support-title">Atelier Concierge</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.84375rem; margin-bottom: 16px;">Have questions about piece sizing, bespoke inquiries, or acquisition timing? Our concierge team is available to assist.</p>
+        <div style="background: var(--bg-canvas); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 14px;">
+          <p style="font-size: 0.8125rem; color: var(--text-primary);"><strong>Direct WhatsApp Concierge:</strong> +234 915 362 5566</p>
+          <p style="font-size: 0.8125rem; color: var(--text-primary); margin-top: 4px;"><strong>Email:</strong> atelier@zizzystores.com</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://wa.me/2349153625566" target="_blank" rel="noopener" class="btn btn-primary">Chat on WhatsApp 💬</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
