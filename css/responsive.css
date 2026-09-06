@@ -177,6 +177,19 @@
     gap: 10px;
   }
 
+  .form-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .banner-preview-box {
+    height: 160px;
+  }
+
+  .banner-store-title {
+    font-size: 1.25rem;
+  }
+
   .modal-overlay {
     padding: 12px;
     align-items: flex-end;

@@ -936,3 +936,231 @@
   justify-content: flex-end;
   gap: 12px;
 }
+
+/* ==========================================================================
+   Brand Profile Specific Components
+   ========================================================================== */
+
+/* Active Page Class for Direct Navigation (when not using pure radio) */
+.nav-item.active-page {
+  background: var(--brand-accent-subtle);
+  color: var(--brand-primary);
+  font-weight: 700;
+  border-left: 3px solid var(--brand-accent);
+}
+
+.nav-item.active-page .nav-icon {
+  color: var(--brand-accent);
+}
+
+/* 2-Column Form Grid */
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-label-caps {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+/* Profile Completion Card */
+.profile-completion-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-xs);
+}
+
+.completion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.completion-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.completion-percentage {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: var(--brand-accent);
+}
+
+.completion-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.completion-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--bg-canvas);
+  color: var(--text-muted);
+  border: 1px solid var(--border-default);
+  transition: all var(--transition-fast);
+}
+
+.completion-pill.completed {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+  border-color: var(--status-success-border);
+  font-weight: 700;
+}
+
+.completion-pill .pill-icon {
+  font-size: 0.75rem;
+}
+
+/* Store Banner Preview Card */
+.banner-preview-box {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-md);
+  border: 2px dashed var(--border-default);
+  background: linear-gradient(135deg, #2C1D11 0%, #4A3320 50%, #8C6547 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+  transition: all var(--transition-fast);
+}
+
+.banner-preview-box:hover {
+  border-color: var(--brand-accent-light);
+}
+
+.banner-overlay-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(35, 24, 18, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.banner-store-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.banner-store-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #F3ECE4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+
+.banner-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Brand Logo Box */
+.logo-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 0 6px 0;
+  gap: 14px;
+}
+
+.logo-display-box {
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(135deg, #1C5EB9 0%, #0E3E85 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(24, 90, 219, 0.25);
+  border: 3px solid #FFFFFF;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+/* Payout Subaccount Box */
+.payout-status-card {
+  padding: 16px;
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+}
+
+.payout-status-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.payout-label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.payout-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Bottom Floating Save Bar (Optional clean action row) */
+.form-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 16px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+}

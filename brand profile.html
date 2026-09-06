@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zizzystores — Brand Profile & Store Settings</title>
+  <meta name="description" content="Manage your Zizzystores branding, contact information, store banner, brand story, and payout configuration.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Zizzystores Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         Sidebar Navigation (Consistent with Overview Dashboard)
+         ==================================================================== -->
+    <aside class="sidebar" aria-label="Main Navigation">
+      <!-- Brand Logo Header -->
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-badge" title="Go to Overview Dashboard">
+          <div class="brand-logo-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="brand-logo-text">Zizzystores</span>
+            <span class="brand-subtext">Digital Store</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav">
+        <!-- Main Group -->
+        <div class="nav-group">
+          <span class="nav-group-title">Store Management</span>
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-item">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  <span>Overview</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#tab-products" class="nav-item">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                  </svg>
+                  <span>Products</span>
+                </span>
+                <span class="nav-badge">12</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#tab-orders" class="nav-item">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span>Orders</span>
+                </span>
+                <span class="nav-badge">3 New</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#tab-customers" class="nav-item">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>Customers</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#tab-insights" class="nav-item">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                  <span>Store Insights</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Secondary Guidance Group -->
+        <div class="nav-group">
+          <span class="nav-group-title">Help & Store Setup</span>
+          <ul class="nav-list">
+            <li>
+              <a href="index.html#tab-guide" class="nav-item">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span>Store Setup Guide</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="brand profile.html" class="nav-item active-page" aria-current="page">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Brand Profile</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#tab-settings" class="nav-item">
+                <span class="nav-item-content">
+                  <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                  <span>Store Settings</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Sidebar User Profile Footer -->
+      <div class="sidebar-footer">
+        <div class="user-profile-card">
+          <div class="user-avatar" aria-hidden="true">Z.</div>
+          <div class="user-details">
+            <p class="user-name">BIG Z</p>
+            <p class="user-role">Brand Director</p>
+          </div>
+          <a href="#modal-settings-info" class="btn-icon" title="Account Details" aria-label="Account Details">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="1"></circle>
+              <circle cx="12" cy="5" r="1"></circle>
+              <circle cx="12" cy="19" r="1"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         Main Wrapper & Header
+         ==================================================================== -->
+    <main class="main-wrapper">
+      
+      <!-- Top Application Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <div class="header-title-wrap">
+            <h1>
+              <span>Brand Profile</span>
+              <span class="badge badge-success">
+                <span class="status-dot dot-green"></span> Live Store
+              </span>
+            </h1>
+            <p class="header-subtitle">Manage your store information, branding and business details.</p>
+          </div>
+        </div>
+
+        <!-- Header Quick Action Buttons -->
+        <div class="header-actions">
+          <a href="#modal-tour-guide" class="btn btn-secondary btn-sm" title="Quick setup walkthrough for sellers">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Tour Guide</span>
+          </a>
+          <a href="#modal-save-success" class="btn btn-primary btn-sm" title="Save your updated profile information">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            <span>Save Changes</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Main Body Container -->
+      <div class="content-body">
+
+        <!-- ====================================================================
+             PROFILE COMPLETION CARD
+             ==================================================================== -->
+        <section class="profile-completion-card" aria-label="Profile Completion Status">
+          <div class="completion-header">
+            <span class="completion-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              PROFILE COMPLETION
+            </span>
+            <span class="completion-percentage">40%</span>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" style="width: 40%; background: linear-gradient(90deg, var(--brand-accent) 0%, #8C6547 100%);"></div>
+          </div>
+
+          <!-- Completion Status Pills -->
+          <div class="completion-pills-wrap">
+            <span class="completion-pill completed">
+              <span class="pill-icon">✓</span> Brand Name
+            </span>
+            <span class="completion-pill completed">
+              <span class="pill-icon">✓</span> Owner Name
+            </span>
+            <span class="completion-pill completed">
+              <span class="pill-icon">✓</span> Email
+            </span>
+            <span class="completion-pill">
+              Logo
+            </span>
+            <span class="completion-pill">
+              Brand Story
+            </span>
+            <span class="completion-pill">
+              Delivery Info
+            </span>
+            <span class="completion-pill completed">
+              <span class="pill-icon">✓</span> Phone
+            </span>
+            <span class="completion-pill">
+              Bank
+            </span>
+            <span class="completion-pill">
+              Instagram
+            </span>
+            <span class="completion-pill">
+              Product Image
+            </span>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             MAIN CONTENT GRID (2/3 Split Left, 1/3 Right)
+             ==================================================================== -->
+        <form action="#modal-save-success" method="get" onsubmit="return true;">
+          <div class="dashboard-split-layout">
+            
+            <!-- LEFT COLUMN (2/3 Main Content) -->
+            <div class="split-left-col">
+              
+              <!-- 1. Brand Banner Card -->
+              <div class="section-card">
+                <div class="card-header-row">
+                  <div class="card-title-group">
+                    <h2>Store Banner</h2>
+                    <p>Customize the large header banner displayed at the top of your public storefront</p>
+                  </div>
+                </div>
+
+                <!-- Banner Preview Area -->
+                <div class="banner-preview-box">
+                  <div class="banner-overlay-content">
+                    <span class="banner-store-tag">Digital Storefront Header</span>
+                    <h3 class="banner-store-title">Zizzystores — Official Storefront</h3>
+                    <p style="font-size: 0.8125rem; color: #EFE8E0;">Premium Streetwear & Contemporary Casuals</p>
+                  </div>
+                </div>
+
+                <!-- Banner Actions & Sizing Guidance -->
+                <div class="banner-actions-row">
+                  <a href="#modal-change-banner" class="btn btn-secondary btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <span>Change Banner</span>
+                  </a>
+                  <span class="text-subtle-hint">Recommended size: 1200 × 400px (JPG, PNG or WebP under 2MB)</span>
+                </div>
+              </div>
+
+              <!-- 2. Core Identity Card -->
+              <div class="section-card">
+                <div class="card-header-row">
+                  <div class="card-title-group">
+                    <h2>Core Identity</h2>
+                    <p>Essential business and contact information used on store receipts and customer invoices</p>
+                  </div>
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="form-group">
+                    <label class="form-label-caps" for="input-brand-name">Brand Name *</label>
+                    <input type="text" id="input-brand-name" class="form-input" value="Zizzystores" required>
+                    <p class="form-help">Your public store name shown to buyers.</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-caps" for="input-owner-name">Owner Name *</label>
+                    <input type="text" id="input-owner-name" class="form-input" value="Baron Dior" required>
+                    <p class="form-help">Account owner and registered business contact.</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-caps" for="input-email">Email Address *</label>
+                    <input type="email" id="input-email" class="form-input" value="diorbaron2@gmail.com" required>
+                    <p class="form-help">Receives order receipts and customer notices.</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-caps" for="input-phone">Phone Number *</label>
+                    <input type="tel" id="input-phone" class="form-input" value="09153625566" required>
+                    <p class="form-help">Connected for WhatsApp customer orders and inquiries.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Brand Story Card -->
+              <div class="section-card">
+                <div class="card-header-row">
+                  <div class="card-title-group">
+                    <h2>Brand Story</h2>
+                    <p>Tell customers what makes your store special</p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label-caps" for="input-brand-story">About Your Store</label>
+                  <textarea id="input-brand-story" class="form-textarea" rows="4" placeholder="Tell customers what makes your store special...">Welcome to Zizzystores — your premier Nigerian destination for contemporary streetwear, tailored denim chinos, vintage oversized tees, and everyday essentials crafted for effortless style and lasting comfort.</textarea>
+                  <p class="form-help">Share your brand story, craftsmanship, and what sets your quality apart to build buyer trust.</p>
+                </div>
+              </div>
+
+              <!-- 4. Store Information Card -->
+              <div class="section-card">
+                <div class="card-header-row">
+                  <div class="card-title-group">
+                    <h2>Store Information</h2>
+                    <p>Storefront description, physical dispatch location, delivery details, and social channels</p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label-caps" for="input-store-desc">Store Description / Tagline</label>
+                  <input type="text" id="input-store-desc" class="form-input" value="Curated Modern Streetwear, Chinos & Casual Apparel">
+                  <p class="form-help">A concise one-line summary displayed under your store title.</p>
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="form-group">
+                    <label class="form-label-caps" for="input-location">Location / City</label>
+                    <input type="text" id="input-location" class="form-input" value="Lekki Phase 1, Lagos, Nigeria">
+                    <p class="form-help">Where orders are packed and dispatched from.</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-caps" for="input-instagram">Social Media / Instagram</label>
+                    <input type="text" id="input-instagram" class="form-input" value="@zizzystores">
+                    <p class="form-help">Your official Instagram handle for buyer discovery.</p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label-caps" for="input-delivery-info">Delivery Information</label>
+                  <textarea id="input-delivery-info" class="form-textarea" rows="3">Standard Lagos Delivery: 24–48 hours (₦2,500). Nationwide Express: 3–5 business days (₦4,500). Free in-store pickup available at Lekki showroom.</textarea>
+                  <p class="form-help">Clearly state dispatch turnaround times and shipping rates for buyers.</p>
+                </div>
+
+                <!-- Form Bottom Actions -->
+                <div class="form-bottom-actions">
+                  <a href="index.html" class="btn btn-secondary">Discard Changes</a>
+                  <a href="#modal-save-success" class="btn btn-primary">Save Changes</a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN (1/3 Side Content) -->
+            <div class="split-right-col">
+              
+              <!-- 1. Brand Logo Card -->
+              <div class="section-card">
+                <div class="card-header-row">
+                  <div class="card-title-group">
+                    <h2>Brand Logo</h2>
+                    <p>Your official store icon</p>
+                  </div>
+                </div>
+
+                <div class="logo-preview-wrapper">
+                  <div class="logo-display-box" aria-label="Current Logo Preview">
+                    Z.
+                  </div>
+                  <div>
+                    <h4 style="font-size: 0.9375rem; color: var(--text-primary); margin-bottom: 2px;">Zizzystores Icon</h4>
+                    <span class="text-subtle-hint">Active storefront avatar</span>
+                  </div>
+                  <a href="#modal-upload-logo" class="btn btn-secondary btn-sm" style="width: 100%;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="17 8 12 3 7 8"></polyline>
+                      <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <span>Upload New Logo</span>
+                  </a>
+                  <span class="text-subtle-hint" style="font-size: 0.71875rem;">Recommended: 500 × 500px square image (PNG or JPG)</span>
+                </div>
+              </div>
+
+              <!-- 2. Payout Configuration Card -->
+              <div class="section-card">
+                <div class="card-header-row">
+                  <div class="card-title-group">
+                    <h2>Payout Configuration</h2>
+                    <p>Bank settlement & sales revenue</p>
+                  </div>
+                </div>
+
+                <div class="payout-status-card">
+                  <div class="payout-status-top">
+                    <span class="payout-label">Paystack Subaccount</span>
+                    <span class="badge badge-warning">Not Configured</span>
+                  </div>
+                  <p class="payout-desc">
+                    Connect your Nigerian bank account to receive automatic direct payouts whenever customers place paid orders on your store.
+                  </p>
+                </div>
+
+                <a href="#modal-payout-setup" class="btn btn-secondary btn-sm" style="width: 100%;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                  </svg>
+                  <span>Connect Bank Account →</span>
+                </a>
+              </div>
+
+              <!-- 3. Live Storefront Card -->
+              <div class="section-card">
+                <div class="card-header-row">
+                  <div class="card-title-group">
+                    <h2>Live Storefront</h2>
+                    <p>Customer-facing digital store</p>
+                  </div>
+                </div>
+
+                <a href="#modal-share-store" class="live-domain-card" title="Open live storefront" style="margin-bottom: 14px; text-align: left;">
+                  <span class="live-domain-label">Your Store URL</span>
+                  <span class="live-domain-url">
+                    www.zizzystores.com
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </a>
+
+                <a href="#modal-share-store" class="btn btn-accent btn-sm" style="width: 100%;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                  </svg>
+                  <span>Share Storefront Link</span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </main>
+
+    <!-- ====================================================================
+         Mobile Bottom Navigation Bar
+         ==================================================================== -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile Bottom Navigation">
+      <a href="index.html" class="mobile-nav-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Home</span>
+      </a>
+
+      <a href="index.html#tab-products" class="mobile-nav-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        </svg>
+        <span>Products</span>
+      </a>
+
+      <a href="index.html#tab-orders" class="mobile-nav-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        </svg>
+        <span>Orders</span>
+      </a>
+
+      <a href="index.html#tab-customers" class="mobile-nav-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+        </svg>
+        <span>Customers</span>
+      </a>
+
+      <a href="brand profile.html" class="mobile-nav-btn" style="color: var(--brand-accent); font-weight: 700;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>Profile</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- ====================================================================
+       PURE CSS MODALS (Using :target pseudo-class)
+       ==================================================================== -->
+
+  <!-- Modal: Tour Guide -->
+  <div id="modal-tour-guide" class="modal-overlay" role="dialog" aria-labelledby="modal-tour-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-tour-title">Brand Profile Guide</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <div class="setup-title-group" style="margin-bottom: 16px;">
+          <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 4px;">Tips to Maximize Store Sales</h4>
+          <p style="font-size: 0.8125rem;">A complete profile helps you build customer trust and convert visitors into buyers faster.</p>
+        </div>
+
+        <div class="setup-steps-grid" style="grid-template-columns: 1fr; gap: 12px;">
+          <div class="setup-step-item completed">
+            <div class="step-top">
+              <span class="step-icon-badge">1</span>
+              <div class="step-details">
+                <h3>High Quality Store Banner</h3>
+                <p>Use a crisp, uncluttered photo of your collection or workshop (1200x400px).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="setup-step-item completed">
+            <div class="step-top">
+              <span class="step-icon-badge">2</span>
+              <div class="step-details">
+                <h3>Authentic Brand Story</h3>
+                <p>Tell customers what makes your apparel unique and how you source your materials.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="setup-step-item completed">
+            <div class="step-top">
+              <span class="step-icon-badge">3</span>
+              <div class="step-details">
+                <h3>Clear Delivery Turnarounds</h3>
+                <p>Set expectations for shipping times so buyers know when their packages arrive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary">Got it, Let's Continue</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Change Banner -->
+  <div id="modal-change-banner" class="modal-overlay" role="dialog" aria-labelledby="modal-banner-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-banner-title">Upload Store Banner</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label" for="banner-file-input">Select Banner Image</label>
+          <input type="file" id="banner-file-input" class="form-input" accept="image/*">
+          <p class="form-help">Supported formats: JPG, PNG, WebP (Max 2MB). Ideal size: 1200 × 400 pixels.</p>
+        </div>
+
+        <div style="background: var(--bg-canvas); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+          <h4 style="font-size: 0.8125rem; margin-bottom: 4px;">Banner Photography Tips:</h4>
+          <p style="font-size: 0.75rem; color: var(--text-muted);">Ensure key text and logos are centered so they display nicely on mobile devices as well as desktop screens.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-secondary">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Banner</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Upload Logo -->
+  <div id="modal-upload-logo" class="modal-overlay" role="dialog" aria-labelledby="modal-logo-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-logo-title">Upload Brand Logo</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label" for="logo-file-input">Select Square Logo File</label>
+          <input type="file" id="logo-file-input" class="form-input" accept="image/*">
+          <p class="form-help">Recommended size: 500 × 500px square image (PNG or JPG).</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-secondary">Cancel</a>
+        <a href="#" class="btn btn-primary">Update Logo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Payout Configuration Setup -->
+  <div id="modal-payout-setup" class="modal-overlay" role="dialog" aria-labelledby="modal-payout-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-payout-title">Configure Bank Payout Account</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.8125rem; margin-bottom: 16px;">Enter your commercial bank account details to receive automatic settlements for orders placed on Zizzystores.</p>
+        
+        <div class="form-group">
+          <label class="form-label" for="payout-bank-select">Select Bank Name *</label>
+          <select id="payout-bank-select" class="form-select">
+            <option>Access Bank Nigeria</option>
+            <option>Guaranty Trust Bank (GTBank)</option>
+            <option>Zenith Bank Plc</option>
+            <option>United Bank for Africa (UBA)</option>
+            <option>First Bank of Nigeria</option>
+            <option>Kuda Microfinance Bank</option>
+            <option>OPay Digital Services</option>
+            <option>Moniepoint Microfinance Bank</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="payout-account-num">10-Digit NUBAN Account Number *</label>
+          <input type="text" id="payout-account-num" class="form-input" placeholder="e.g. 0123456789" maxlength="10">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="payout-account-name">Account Beneficiary Name *</label>
+          <input type="text" id="payout-account-name" class="form-input" placeholder="e.g. BARON DIOR / ZIZZYSTORES">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-secondary">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Bank Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Save Success Confirmation -->
+  <div id="modal-save-success" class="modal-overlay" role="dialog" aria-labelledby="modal-success-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-success-title" style="color: var(--status-success-text);">✓ Brand Profile Saved</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 28px 24px;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--status-success-bg); color: var(--status-success-text); display: inline-flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 16px;">
+          ✓
+        </div>
+        <h4 style="font-size: 1.125rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">Changes Published to Storefront</h4>
+        <p style="font-size: 0.84375rem; color: var(--text-secondary);">Your updated store banner, brand story, core identity, and contact information are now live on Zizzystores.</p>
+      </div>
+      <div class="modal-footer" style="justify-content: center;">
+        <a href="#" class="btn btn-primary">Done</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Share Storefront Link -->
+  <div id="modal-share-store" class="modal-overlay" role="dialog" aria-labelledby="modal-share-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-share-title">Share Your Digital Store</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="margin-bottom: 16px; font-size: 0.8125rem;">Share your official store link with customers on WhatsApp, Instagram bio, Twitter, or TikTok.</p>
+        <div class="form-group">
+          <label class="form-label" for="share-store-link">Your Storefront URL</label>
+          <input type="text" id="share-store-link" class="form-input" value="https://www.zizzystores.com" readonly>
+        </div>
+        <div style="display: flex; gap: 10px; margin-top: 14px;">
+          <a href="https://wa.me/?text=Check%20out%20Zizzystores%20online%20at%20https://www.zizzystores.com" target="_blank" rel="noopener" class="btn btn-accent" style="flex: 1;">
+            Share on WhatsApp 💬
+          </a>
+          <a href="#" class="btn btn-secondary">
+            Copy Link 📋
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-secondary">Done</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Account Details / Settings Info -->
+  <div id="modal-settings-info" class="modal-overlay" role="dialog" aria-labelledby="modal-user-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-user-title">Account Details</h3>
+        <a href="#" class="modal-close-btn" aria-label="Close dialog">&times;</a>
+      </div>
+      <div class="modal-body">
+        <div class="user-profile-card" style="margin-bottom: 16px;">
+          <div class="user-avatar" aria-hidden="true">Z.</div>
+          <div class="user-details">
+            <p class="user-name">BIG Z</p>
+            <p class="user-role">Brand Director</p>
+          </div>
+        </div>
+        <div class="store-contact-row" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+          <span><strong>Email:</strong> diorbaron2@gmail.com</span>
+          <span><strong>Role:</strong> Administrator</span>
+          <span><strong>Store ID:</strong> ZZY-8901-NG</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-secondary">Close</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
