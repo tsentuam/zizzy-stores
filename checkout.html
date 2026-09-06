@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Sleeve Up</title>
+  <meta name="description" content="Secure checkout for your Sleeve Up acquisition. Fast, encrypted payment and nationwide delivery.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Isolated Checkout Stylesheet -->
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       1. HEADER
+       ==================================================================== -->
+  <header class="checkout-header" aria-label="Checkout Header">
+    <a href="index.html" class="brand-logo" title="Sleeve Up Storefront">
+      <span>SLEEVE UP</span>
+    </a>
+
+    <div class="header-secure-badge" aria-label="Security Notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+      <span>SECURE CHECKOUT</span>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       2. CHECKOUT PROGRESS
+       ==================================================================== -->
+  <div class="progress-container" aria-label="Checkout Step Progress">
+    <div class="progress-step active" aria-current="step">
+      <span class="step-badge">1</span>
+      <span>Details</span>
+    </div>
+
+    <div class="progress-divider" aria-hidden="true"></div>
+
+    <div class="progress-step inactive">
+      <span class="step-badge">2</span>
+      <span>Payment</span>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       3. MAIN CHECKOUT AREA (2-Column Desktop Layout)
+       ==================================================================== -->
+  <main class="checkout-main">
+    <div class="checkout-grid">
+      
+      <!-- LEFT COLUMN: Contact & Shipping Form -->
+      <section class="checkout-form-column" aria-label="Contact and Shipping Information">
+        <h1 class="section-heading">Contact &amp; Shipping</h1>
+
+        <form action="#modal-checkout-success" method="get" id="checkout-form">
+          
+          <!-- Email Address -->
+          <div class="form-group">
+            <label class="form-label" for="email">EMAIL ADDRESS *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="For order confirmation" required>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-group">
+            <label class="form-label" for="phone">PHONE NUMBER *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="For delivery updates" required>
+          </div>
+
+          <!-- First Name & Last Name -->
+          <div class="form-row-2col">
+            <div class="form-group">
+              <label class="form-label" for="first-name">FIRST NAME *</label>
+              <input type="text" id="first-name" name="first_name" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="last-name">LAST NAME *</label>
+              <input type="text" id="last-name" name="last_name" class="form-input" required>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="form-group">
+            <label class="form-label" for="address">ADDRESS *</label>
+            <input type="text" id="address" name="address" class="form-input" required>
+          </div>
+
+          <!-- City & Postal Code -->
+          <div class="form-row-2col">
+            <div class="form-group">
+              <label class="form-label" for="city">CITY *</label>
+              <input type="text" id="city" name="city" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="postal-code">POSTAL / ZIP CODE</label>
+              <input type="text" id="postal-code" name="postal_code" class="form-input">
+            </div>
+          </div>
+
+          <!-- Payment Method Section -->
+          <fieldset style="border: none; margin: 0; padding: 0;">
+            <legend class="payment-section-title">Payment Method</legend>
+            
+            <div class="payment-options-grid">
+              
+              <!-- Option 1: Local (Paystack) -->
+              <div>
+                <input type="radio" name="payment_method" id="pay-local" class="payment-radio-input" value="paystack">
+                <label for="pay-local" class="payment-card-label">
+                  <span class="payment-card-header">
+                    <span class="custom-radio" aria-hidden="true"></span>
+                    <span>Local (Paystack)</span>
+                  </span>
+                  <span class="payment-card-desc">Best for Nigeria Card, Transfer &amp; USSD</span>
+                </label>
+              </div>
+
+              <!-- Option 2: International (Flutterwave) -->
+              <div>
+                <input type="radio" name="payment_method" id="pay-intl" class="payment-radio-input" value="flutterwave" checked>
+                <label for="pay-intl" class="payment-card-label">
+                  <span class="payment-card-header">
+                    <span class="custom-radio" aria-hidden="true"></span>
+                    <span>International (Flutterwave)</span>
+                  </span>
+                  <span class="payment-card-desc">Best for International Cards &amp; Mobile Money</span>
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit-payment">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Proceed to Secure Payment</span>
+          </button>
+
+          <!-- Supporting Text -->
+          <p class="payment-notice-subtext">You'll review your order before final payment</p>
+
+          <!-- Return to Cart -->
+          <div class="return-cart-wrap">
+            <a href="your selection.html" class="return-cart-link">
+              <span>← Return to Cart</span>
+            </a>
+          </div>
+
+        </form>
+      </section>
+
+      <!-- RIGHT COLUMN: Order Summary Card -->
+      <aside class="checkout-summary-column" aria-label="Order Summary">
+        
+        <!-- White Order Summary Box -->
+        <div class="order-summary-card">
+          <h2 class="summary-card-title">Order Summary</h2>
+
+          <!-- Product Item -->
+          <div class="summary-product-item">
+            <div class="product-thumb-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+            </div>
+            <div class="product-meta-details">
+              <h3 class="product-meta-name">Atelier Luxury Piece</h3>
+              <p class="product-meta-sub">Default</p>
+              <p class="product-meta-qty">Qty: 1</p>
+            </div>
+            <div class="product-meta-price">
+              <span>₦50,000</span>
+            </div>
+          </div>
+
+          <!-- Pricing Rows -->
+          <div class="summary-pricing-list">
+            <div class="summary-price-row">
+              <span>Subtotal</span>
+              <strong>₦50,000</strong>
+            </div>
+
+            <div class="summary-price-row">
+              <span>Shipping</span>
+              <span class="shipping-estimate-tag">Delivery: 2–5 business days</span>
+            </div>
+          </div>
+
+          <div class="summary-card-divider"></div>
+
+          <!-- Total Row -->
+          <div class="summary-total-row">
+            <span class="total-label">Total</span>
+            <span class="total-amount">₦50,000</span>
+          </div>
+
+          <!-- Authenticity Guarantee Box -->
+          <div class="summary-guarantee-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>ATELIER GUARANTEE: AUTHENTICITY &amp; SECURE LOCAL SHIPPING INCLUDED.</span>
+          </div>
+        </div>
+
+        <!-- Trust Badges Strip -->
+        <div class="trust-badges-card" aria-label="Payment Security Standards">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Verified Security">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="Encrypted Card Processing">
+            <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+            <line x1="2" y1="10" x2="22" y2="10"></line>
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" title="256-Bit SSL Encryption">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       4. FOOTER
+       ==================================================================== -->
+  <footer class="checkout-footer" aria-label="Footer Information">
+    <div class="footer-brand">
+      <span>Sleeve Up</span>
+    </div>
+
+    <nav class="footer-links" aria-label="Legal Links">
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms of Service</a>
+      <a href="#" class="footer-link">Shipping &amp; Returns</a>
+      <a href="#" class="footer-link">Sustainability</a>
+    </nav>
+
+    <div class="footer-copyright">
+      <span>© 2026 Sleeve Up. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Floating Customer Support Widget -->
+  <a href="https://wa.me/2349153625566" target="_blank" rel="noopener" class="chat-concierge-pill" aria-label="Customer Support Concierge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </a>
+
+</body>
+</html>
