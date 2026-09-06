@@ -20,16 +20,16 @@
 </head>
 <body>
 
-  <!-- Pure CSS Tab Routing Radio Controls -->
-  <input type="radio" name="dashboard-tab" id="tab-overview" class="tab-radio" checked>
-  <input type="radio" name="dashboard-tab" id="tab-products" class="tab-radio">
-  <input type="radio" name="dashboard-tab" id="tab-orders" class="tab-radio">
-  <input type="radio" name="dashboard-tab" id="tab-customers" class="tab-radio">
-  <input type="radio" name="dashboard-tab" id="tab-insights" class="tab-radio">
-  <input type="radio" name="dashboard-tab" id="tab-guide" class="tab-radio">
-  <input type="radio" name="dashboard-tab" id="tab-settings" class="tab-radio">
-
   <div class="app-container">
+
+    <!-- Pure CSS Tab Routing Radio Controls -->
+    <input type="radio" name="dashboard-tab" id="tab-overview" class="tab-radio" checked>
+    <input type="radio" name="dashboard-tab" id="tab-products" class="tab-radio">
+    <input type="radio" name="dashboard-tab" id="tab-orders" class="tab-radio">
+    <input type="radio" name="dashboard-tab" id="tab-customers" class="tab-radio">
+    <input type="radio" name="dashboard-tab" id="tab-insights" class="tab-radio">
+    <input type="radio" name="dashboard-tab" id="tab-guide" class="tab-radio">
+    <input type="radio" name="dashboard-tab" id="tab-settings" class="tab-radio">
 
     <!-- ====================================================================
          Sidebar Navigation
@@ -355,92 +355,65 @@
             </div>
           </div>
 
-          <!-- Primary Metric Cards (4 Beginner-Friendly Cards) -->
+          <!-- Summary Cards (3-Card Responsive Grid) -->
           <div class="metrics-grid">
             
             <!-- Card 1: Total Sales -->
             <div class="metric-card metric-sales">
               <div class="metric-card-top">
-                <div class="metric-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div class="metric-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="12" y1="1" x2="12" y2="23"></line>
                     <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                   </svg>
                 </div>
-                <span class="badge badge-success">+18.4% this month</span>
+                <span class="badge badge-success">+12.4% this month</span>
               </div>
               <div class="metric-label-group">
                 <span class="metric-title">Total Sales</span>
-                <p class="metric-explain">Money made from completed orders</p>
               </div>
               <div class="metric-value-row">
-                <span class="metric-number"><span class="currency-symbol">₦</span>145,200</span>
-                <span class="metric-subtag">🟢 14 paid orders</span>
+                <span class="metric-number"><span class="currency-symbol">₦</span>200</span>
               </div>
             </div>
 
-            <!-- Card 2: Products Listed -->
+            <!-- Card 2: Products -->
             <div class="metric-card metric-products">
               <div class="metric-card-top">
-                <div class="metric-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div class="metric-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
                   </svg>
                 </div>
-                <span class="badge badge-warning">2 Low in Stock</span>
               </div>
               <div class="metric-label-group">
                 <span class="metric-title">Products</span>
-                <p class="metric-explain">Items currently listed in your store</p>
               </div>
               <div class="metric-value-row">
-                <span class="metric-number">12</span>
-                <span class="text-subtle-hint">10 In Stock</span>
+                <span class="metric-number">6</span>
               </div>
+              <p class="metric-supporting-text">Products currently listed in your store</p>
             </div>
 
             <!-- Card 3: Store Visitors -->
             <div class="metric-card metric-visitors">
               <div class="metric-card-top">
-                <div class="metric-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div class="metric-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <circle cx="12" cy="12" r="3"></circle>
                   </svg>
                 </div>
-                <span class="badge badge-info">+34 this week</span>
               </div>
               <div class="metric-label-group">
                 <span class="metric-title">Store Visitors</span>
-                <p class="metric-explain">People who viewed your online store</p>
               </div>
               <div class="metric-value-row">
-                <span class="metric-number">482</span>
-                <span class="text-subtle-hint">72% mobile buyers</span>
+                <span class="metric-number">0</span>
               </div>
-            </div>
-
-            <!-- Card 4: Orders to Ship -->
-            <div class="metric-card metric-orders">
-              <div class="metric-card-top">
-                <div class="metric-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="1" y="3" width="15" height="13"></rect>
-                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                  </svg>
-                </div>
-                <span class="badge badge-warning">Action Needed</span>
-              </div>
-              <div class="metric-label-group">
-                <span class="metric-title">Orders to Ship</span>
-                <p class="metric-explain">Paid orders waiting to be packed</p>
-              </div>
-              <div class="metric-value-row">
-                <span class="metric-number">3</span>
-                <span class="text-subtle-hint">Ready for dispatch</span>
-              </div>
+              <p class="metric-supporting-text">People who visited your store</p>
             </div>
 
           </div>
@@ -1038,7 +1011,7 @@
              VIEW 5: STORE INSIGHTS
              ==================================================================== -->
         <section id="view-insights" class="view-section">
-          <div class="metrics-grid">
+          <div class="metrics-grid metrics-grid-4">
             <div class="metric-card">
               <div class="metric-label-group">
                 <span class="metric-title">Average Order Value</span>

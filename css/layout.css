@@ -309,23 +309,37 @@
 
 /* Radio Checked -> View Visibility */
 #tab-overview:checked ~ .main-wrapper #view-overview,
+#tab-overview:checked ~ .app-container .main-wrapper #view-overview,
 #tab-products:checked ~ .main-wrapper #view-products,
+#tab-products:checked ~ .app-container .main-wrapper #view-products,
 #tab-orders:checked ~ .main-wrapper #view-orders,
+#tab-orders:checked ~ .app-container .main-wrapper #view-orders,
 #tab-customers:checked ~ .main-wrapper #view-customers,
+#tab-customers:checked ~ .app-container .main-wrapper #view-customers,
 #tab-insights:checked ~ .main-wrapper #view-insights,
+#tab-insights:checked ~ .app-container .main-wrapper #view-insights,
 #tab-guide:checked ~ .main-wrapper #view-guide,
-#tab-settings:checked ~ .main-wrapper #view-settings {
+#tab-guide:checked ~ .app-container .main-wrapper #view-guide,
+#tab-settings:checked ~ .main-wrapper #view-settings,
+#tab-settings:checked ~ .app-container .main-wrapper #view-settings {
   display: block;
 }
 
 /* Radio Checked -> Sidebar Active Highlight */
 #tab-overview:checked ~ .sidebar .nav-item[for="tab-overview"],
+#tab-overview:checked ~ .app-container .sidebar .nav-item[for="tab-overview"],
 #tab-products:checked ~ .sidebar .nav-item[for="tab-products"],
+#tab-products:checked ~ .app-container .sidebar .nav-item[for="tab-products"],
 #tab-orders:checked ~ .sidebar .nav-item[for="tab-orders"],
+#tab-orders:checked ~ .app-container .sidebar .nav-item[for="tab-orders"],
 #tab-customers:checked ~ .sidebar .nav-item[for="tab-customers"],
+#tab-customers:checked ~ .app-container .sidebar .nav-item[for="tab-customers"],
 #tab-insights:checked ~ .sidebar .nav-item[for="tab-insights"],
+#tab-insights:checked ~ .app-container .sidebar .nav-item[for="tab-insights"],
 #tab-guide:checked ~ .sidebar .nav-item[for="tab-guide"],
-#tab-settings:checked ~ .sidebar .nav-item[for="tab-settings"] {
+#tab-guide:checked ~ .app-container .sidebar .nav-item[for="tab-guide"],
+#tab-settings:checked ~ .sidebar .nav-item[for="tab-settings"],
+#tab-settings:checked ~ .app-container .sidebar .nav-item[for="tab-settings"] {
   background: var(--brand-accent-subtle);
   color: var(--brand-primary);
   font-weight: 700;
@@ -333,11 +347,18 @@
 }
 
 #tab-overview:checked ~ .sidebar .nav-item[for="tab-overview"] .nav-icon,
+#tab-overview:checked ~ .app-container .sidebar .nav-item[for="tab-overview"] .nav-icon,
 #tab-products:checked ~ .sidebar .nav-item[for="tab-products"] .nav-icon,
+#tab-products:checked ~ .app-container .sidebar .nav-item[for="tab-products"] .nav-icon,
 #tab-orders:checked ~ .sidebar .nav-item[for="tab-orders"] .nav-icon,
+#tab-orders:checked ~ .app-container .sidebar .nav-item[for="tab-orders"] .nav-icon,
 #tab-customers:checked ~ .sidebar .nav-item[for="tab-customers"] .nav-icon,
+#tab-customers:checked ~ .app-container .sidebar .nav-item[for="tab-customers"] .nav-icon,
 #tab-insights:checked ~ .sidebar .nav-item[for="tab-insights"] .nav-icon,
+#tab-insights:checked ~ .app-container .sidebar .nav-item[for="tab-insights"] .nav-icon,
 #tab-guide:checked ~ .sidebar .nav-item[for="tab-guide"] .nav-icon,
-#tab-settings:checked ~ .sidebar .nav-item[for="tab-settings"] .nav-icon {
+#tab-guide:checked ~ .app-container .sidebar .nav-item[for="tab-guide"] .nav-icon,
+#tab-settings:checked ~ .sidebar .nav-item[for="tab-settings"] .nav-icon,
+#tab-settings:checked ~ .app-container .sidebar .nav-item[for="tab-settings"] .nav-icon {
   color: var(--brand-accent);
 }

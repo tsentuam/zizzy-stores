@@ -41,10 +41,15 @@
 
 /* Mobile Bottom Nav Active States */
 #tab-overview:checked ~ .mobile-bottom-nav .mobile-nav-btn[for="tab-overview"],
+#tab-overview:checked ~ .app-container .mobile-bottom-nav .mobile-nav-btn[for="tab-overview"],
 #tab-products:checked ~ .mobile-bottom-nav .mobile-nav-btn[for="tab-products"],
+#tab-products:checked ~ .app-container .mobile-bottom-nav .mobile-nav-btn[for="tab-products"],
 #tab-orders:checked ~ .mobile-bottom-nav .mobile-nav-btn[for="tab-orders"],
+#tab-orders:checked ~ .app-container .mobile-bottom-nav .mobile-nav-btn[for="tab-orders"],
 #tab-customers:checked ~ .mobile-bottom-nav .mobile-nav-btn[for="tab-customers"],
-#tab-insights:checked ~ .mobile-bottom-nav .mobile-nav-btn[for="tab-insights"] {
+#tab-customers:checked ~ .app-container .mobile-bottom-nav .mobile-nav-btn[for="tab-customers"],
+#tab-insights:checked ~ .mobile-bottom-nav .mobile-nav-btn[for="tab-insights"],
+#tab-insights:checked ~ .app-container .mobile-bottom-nav .mobile-nav-btn[for="tab-insights"] {
   color: var(--brand-accent);
   font-weight: 700;
 }
@@ -59,7 +64,12 @@
     padding: 24px;
   }
 
-  .metrics-grid,
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .metrics-grid-4,
   .setup-steps-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -137,8 +147,9 @@
     justify-content: space-between;
   }
 
-  .metrics-grid {
-    grid-template-columns: 1fr 1fr;
+  .metrics-grid,
+  .metrics-grid-4 {
+    grid-template-columns: 1fr;
     gap: 12px;
     margin-bottom: 20px;
   }
