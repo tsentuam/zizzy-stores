@@ -1,0 +1,772 @@
+/* ==========================================================================
+   ZIZZY STORES — GAIN ACCESS (CREATE ACCOUNT) PAGE STYLESHEET
+   Strict Zero-Scroll Desktop Viewport & Dynamic Account Type Switching
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS & VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Warm Cream & Canvas Colors */
+  --bg-canvas: #FBF9F5;
+  --bg-sidebar: #F7F3EC;
+  --bg-card: rgba(255, 255, 255, 0.90);
+  --bg-input: transparent;
+  
+  /* Espresso & Brand Palette */
+  --brand-espresso: #4A2810;
+  --brand-espresso-hover: #361C0A;
+  --brand-espresso-dark: #2C180A;
+  --brand-terracotta: #8C6547;
+  --brand-accent-tint: #F5EFE8;
+  
+  /* Typography Colors */
+  --text-main: #231812;
+  --text-sub: #635246;
+  --text-muted: #948275;
+  --text-light: #B5A89E;
+  
+  /* Borders & Shadows */
+  --border-subtle: #EDE4D8;
+  --border-input: #E3D9CE;
+  --border-input-focus: #4A2810;
+  --border-card-selected: #4A2810;
+  --shadow-sm: 0 2px 8px rgba(74, 40, 16, 0.05);
+  --shadow-card: 0 10px 30px rgba(74, 40, 16, 0.06);
+  --shadow-float: 0 4px 16px rgba(0, 0, 0, 0.16);
+
+  /* Fonts */
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & GLOBAL CONTAINER
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CRITICAL: Strict No Scroll on Desktop */
+body {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input, select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Background Watermark */
+.bg-watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-6deg);
+  font-size: clamp(5rem, 14vw, 13rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: rgba(92, 52, 23, 0.032);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  font-family: var(--font-serif);
+}
+
+/* --------------------------------------------------------------------------
+   3. MAIN THREE-PANEL VIEWPORT LAYOUT
+   -------------------------------------------------------------------------- */
+.auth-viewport {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 290px minmax(500px, 580px) 1fr;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   4. LEFT PANEL: BRAND SIDEBAR (Consistent with Sign In)
+   -------------------------------------------------------------------------- */
+.auth-sidebar {
+  padding: 24px 28px 24px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.back-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-nav-btn:hover {
+  transform: translateX(-2px);
+  border-color: var(--brand-terracotta);
+  box-shadow: 0 4px 12px rgba(74, 40, 16, 0.08);
+}
+
+.brand-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brand-wordmark {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-main);
+  max-width: 190px;
+}
+
+.trust-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: var(--text-sub);
+  font-weight: 500;
+}
+
+.trust-icon-wrap {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--brand-terracotta);
+}
+
+.trust-icon-wrap svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--brand-terracotta);
+}
+
+/* --------------------------------------------------------------------------
+   5. CENTER PANEL: MAIN FORM CARD (Compact Rhythm for Zero Scroll)
+   -------------------------------------------------------------------------- */
+.auth-main-panel {
+  background-color: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  box-shadow: 0 0 40px rgba(74, 40, 16, 0.03);
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar */
+.auth-main-panel::-webkit-scrollbar {
+  display: none;
+}
+.auth-main-panel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.form-inner-wrapper {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Tab Switcher */
+.auth-tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+}
+
+.auth-tab {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: -7px;
+  transition: color 0.2s ease;
+}
+
+.auth-tab.active {
+  color: var(--text-main);
+  border-bottom: 2.5px solid var(--brand-espresso);
+}
+
+.auth-tab:not(.active):hover {
+  color: var(--brand-espresso);
+}
+
+/* Form Header */
+.form-header {
+  margin-bottom: 8px;
+}
+
+.form-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 2px;
+}
+
+.form-subtitle {
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--text-sub);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+/* Quick Perks Row */
+.perks-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.perk-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.perk-item svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--brand-terracotta);
+  flex-shrink: 0;
+}
+
+/* Section Divider Headers */
+.section-mini-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: var(--brand-terracotta);
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+.section-mini-heading::before {
+  content: '';
+  display: inline-block;
+  width: 2.5px;
+  height: 9px;
+  background-color: var(--brand-terracotta);
+  border-radius: 1px;
+}
+
+/* Account Type Selector (Side by Side) */
+.account-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.account-type-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-input);
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.account-type-card:hover {
+  border-color: var(--brand-terracotta);
+}
+
+.account-type-card.selected {
+  border-color: var(--border-card-selected);
+  background-color: var(--brand-accent-tint);
+  box-shadow: 0 2px 8px rgba(74, 40, 16, 0.08);
+}
+
+.type-icon-box {
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  background: rgba(74, 40, 16, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-espresso);
+  flex-shrink: 0;
+}
+
+.account-type-card.selected .type-icon-box {
+  background: var(--brand-espresso);
+  color: #FFFFFF;
+}
+
+.type-icon-box svg {
+  width: 14px;
+  height: 14px;
+}
+
+.type-text-group {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.type-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.type-desc {
+  font-size: 9px;
+  color: var(--text-muted);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Credentials Grid */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 14px;
+  margin-bottom: 4px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-sub);
+  margin-bottom: 2px;
+}
+
+.input-underline-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--border-input);
+  padding: 4px 0 5px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-main);
+  transition: border-color 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.form-input:focus {
+  border-bottom-color: var(--border-input-focus);
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--text-main);
+}
+
+.password-toggle-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Primary CTA Button */
+.btn-primary-auth {
+  width: 100%;
+  background-color: var(--brand-espresso);
+  color: #FFFFFF;
+  padding: 9.5px 18px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(74, 40, 16, 0.16);
+}
+
+.btn-primary-auth:hover {
+  background-color: var(--brand-espresso-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(74, 40, 16, 0.22);
+}
+
+.btn-primary-auth:active {
+  transform: translateY(0);
+}
+
+/* Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.divider-text {
+  padding: 0 10px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Google Secondary Button */
+.btn-google-auth {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid var(--border-input);
+  border-radius: 4px;
+  padding: 7.5px 14px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-google-auth:hover {
+  border-color: var(--text-muted);
+  background-color: #FAFAFA;
+}
+
+.google-icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* Footer Link */
+.auth-footer-prompt {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-sub);
+}
+
+.auth-footer-link {
+  color: var(--brand-espresso);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.auth-footer-link:hover {
+  color: var(--brand-terracotta);
+}
+
+/* --------------------------------------------------------------------------
+   6. RIGHT PANEL: TESTIMONIAL & FLOATING SUPPORT
+   -------------------------------------------------------------------------- */
+.auth-social-panel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 28px 24px 22px;
+  max-width: 290px;
+  width: 100%;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.quote-text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text-main);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.quote-author {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quote-author::before {
+  content: '—';
+  font-weight: 400;
+}
+
+/* Floating Support Icons */
+.floating-actions-group {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 100;
+}
+
+.floating-action-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-float);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.floating-action-btn:hover {
+  transform: scale(1.08);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+}
+
+.btn-chat {
+  background-color: var(--brand-espresso);
+}
+
+.floating-action-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .auth-viewport {
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
+    grid-template-columns: 240px 1fr;
+  }
+
+  .auth-social-panel {
+    display: none;
+  }
+
+  .auth-main-panel {
+    height: auto;
+    min-height: 100vh;
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .auth-viewport {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .auth-sidebar {
+    padding: 16px 18px 8px;
+  }
+
+  .sidebar-top {
+    gap: 12px;
+  }
+
+  .trust-checklist {
+    display: none;
+  }
+
+  .auth-main-panel {
+    padding: 16px 16px 32px;
+    border: none;
+    box-shadow: none;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .account-type-grid,
+  .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .floating-actions-group {
+    bottom: 16px;
+    right: 16px;
+    gap: 8px;
+  }
+
+  .floating-action-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .floating-action-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
