@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Zizzy Stores</title>
+  <meta name="description" content="Access your personalized Zizzy Stores dashboard. Enter your credentials to proceed to your management interface.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Dedicated Stylesheet -->
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+
+  <!-- Background Decorative Watermark -->
+  <div class="bg-watermark" aria-hidden="true">Zizzy Stores</div>
+
+  <!-- Single Viewport Auth Container (Zero Scroll on Desktop) -->
+  <div class="auth-viewport">
+
+    <!-- ====================================================================
+         LEFT PANEL: BRAND SIDEBAR
+         ==================================================================== -->
+    <aside class="auth-sidebar" aria-label="Brand Overview">
+      <div class="sidebar-top">
+        <!-- Back Arrow Button -->
+        <a href="index.html" class="back-nav-btn" title="Back to Dashboard" aria-label="Back to Dashboard">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </a>
+
+        <!-- Wordmark & Tagline -->
+        <div class="brand-identity">
+          <h2 class="brand-wordmark">Zizzy Stores.</h2>
+          <p class="brand-tagline">Accelerate your business online.</p>
+        </div>
+      </div>
+
+      <!-- Trust Badges Checklist -->
+      <ul class="trust-checklist">
+        <li class="trust-item">
+          <span class="trust-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </span>
+          <span>Launch in 24 hours</span>
+        </li>
+        <li class="trust-item">
+          <span class="trust-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </span>
+          <span>Trusted by 100+ businesses</span>
+        </li>
+        <li class="trust-item">
+          <span class="trust-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </span>
+          <span>Free 14-day trial available</span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- ====================================================================
+         CENTER PANEL: MAIN AUTH FORM CARD
+         ==================================================================== -->
+    <main class="auth-main-panel" aria-label="Sign In Interface">
+      <div class="form-inner-wrapper">
+        
+        <!-- Two-Tab Toggle (Member Access Active) -->
+        <nav class="auth-tabs" aria-label="Account Access Options">
+          <button type="button" class="auth-tab active" aria-current="page">Member Access</button>
+          <a href="#" class="auth-tab" title="Gain Access / Create Account">Gain Access</a>
+        </nav>
+
+        <!-- Header -->
+        <div class="form-header">
+          <h1 class="form-title">Sign In</h1>
+          <p class="form-subtitle">
+            Access your personalized dashboard. Enter your credentials to proceed to your management interface.
+          </p>
+        </div>
+
+        <!-- Form Elements -->
+        <form class="auth-form" onsubmit="event.preventDefault(); window.location.href='index.html';">
+          
+          <!-- Email Address -->
+          <div class="form-group">
+            <label for="signin-email" class="form-label">Email Address</label>
+            <div class="input-underline-wrap">
+              <input 
+                type="email" 
+                id="signin-email" 
+                name="email" 
+                class="form-input" 
+                placeholder="johndoe@gmail.com" 
+                autocomplete="email" 
+                required
+              >
+            </div>
+          </div>
+
+          <!-- Password with Show/Hide Toggle -->
+          <div class="form-group">
+            <label for="signin-password" class="form-label">Password</label>
+            <div class="input-underline-wrap">
+              <input 
+                type="password" 
+                id="signin-password" 
+                name="password" 
+                class="form-input" 
+                placeholder="••••••••" 
+                autocomplete="current-password" 
+                required
+              >
+              <button 
+                type="button" 
+                id="toggle-password-btn" 
+                class="password-toggle-btn" 
+                aria-label="Toggle password visibility"
+              >
+                <!-- Eye Open Icon (Default) -->
+                <svg id="eye-icon-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <!-- Eye Off Icon (Hidden Initially) -->
+                <svg id="eye-icon-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Forgot Password Link -->
+          <div class="form-aux-row">
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <!-- Primary CTA Button -->
+          <button type="submit" class="btn-primary-auth">
+            Welcome Back
+          </button>
+
+          <!-- Divider -->
+          <div class="auth-divider" aria-hidden="true">
+            <span class="divider-text">Or continue with</span>
+          </div>
+
+          <!-- Secondary Google Button -->
+          <button type="button" class="btn-google-auth" onclick="window.location.href='index.html'">
+            <svg class="google-icon" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span>Google</span>
+          </button>
+
+          <!-- Footer Prompt -->
+          <p class="auth-footer-prompt">
+            Don't have an account? <a href="#" class="auth-footer-link">Create one</a>
+          </p>
+
+        </form>
+      </div>
+    </main>
+
+    <!-- ====================================================================
+         RIGHT PANEL: SOCIAL PROOF TESTIMONIAL
+         ==================================================================== -->
+    <aside class="auth-social-panel" aria-label="Store Testimonial">
+      <div class="testimonial-card">
+        <p class="quote-text">
+          &ldquo;Your brand is what people say about you when you're not in the room.&rdquo;
+        </p>
+        <span class="quote-author">JEFF BEZOS</span>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Floating Support Actions (Bottom Right) -->
+  <div class="floating-actions-group" aria-label="Customer Support Triggers">
+    <a href="https://wa.me/" class="floating-action-btn btn-whatsapp" title="WhatsApp Support" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.954 1.18-.175.2-.351.226-.652.075-.3-.15-1.267-.467-2.414-1.489-.893-.796-1.496-1.78-1.671-2.081-.176-.301-.019-.464.132-.614.135-.135.301-.351.451-.527.15-.175.2-.301.301-.501.1-.2.05-.376-.025-.526-.075-.15-.678-1.634-.928-2.235-.244-.587-.492-.507-.678-.517-.175-.01-.376-.01-.577-.01s-.527.075-.803.376c-.276.301-1.053 1.029-1.053 2.508 0 1.48 1.079 2.909 1.229 3.109.15.2 2.123 3.242 5.143 4.547.718.31 1.279.496 1.716.635.722.23 1.378.197 1.897.12.578-.087 1.78-.727 2.03-1.43.251-.702.251-1.304.176-1.43-.076-.125-.276-.201-.577-.351z"/>
+        <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.76.46 3.479 1.334 4.996L2.003 22l5.127-1.345c1.47.801 3.123 1.223 4.874 1.223 5.523 0 10.003-4.48 10.003-10.004C22.007 6.48 17.527 2 12.004 2zm0 18.293c-1.543 0-3.053-.415-4.372-1.2l-.314-.186-3.252.853.868-3.17-.204-.325c-.863-1.373-1.319-2.969-1.319-4.611 0-4.57 3.719-8.289 8.289-8.289 4.57 0 8.289 3.719 8.289 8.289 0 4.57-3.719 8.289-8.289 8.289z"/>
+      </svg>
+    </a>
+
+    <button type="button" class="floating-action-btn btn-chat" title="Live Chat Support" aria-label="Live Chat Support">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Password Show / Hide Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('toggle-password-btn');
+      const passwordInput = document.getElementById('signin-password');
+      const eyeShow = document.getElementById('eye-icon-show');
+      const eyeHide = document.getElementById('eye-icon-hide');
+
+      if (toggleBtn && passwordInput) {
+        toggleBtn.addEventListener('click', () => {
+          const isPassword = passwordInput.type === 'password';
+          passwordInput.type = isPassword ? 'text' : 'password';
+          eyeShow.style.display = isPassword ? 'none' : 'block';
+          eyeHide.style.display = isPassword ? 'block' : 'none';
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
